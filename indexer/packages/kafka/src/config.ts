@@ -12,7 +12,9 @@ import {
 
 export const kafkaConfigSchema = {
   // Required to set groupId and clientId for kafka.
-  SERVICE_NAME: parseString(),
+  SERVICE_NAME: parseString({
+    default:"kafka"
+  }),
 
   KAFKA_BROKER_URLS: parseString({
     default: 'localhost:9092',
